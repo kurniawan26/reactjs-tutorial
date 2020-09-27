@@ -1,4 +1,153 @@
-.App {
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #e06262;
+  --secondary: #f2eecb;
+  --thirdty: #000000;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.thirdty {
+  color: var(--thirdty);
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  background-color: #2d2d2d;
+  height: 100vh;
+}
+
+body .html {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: 800px;
+  background-color: var(--secondary);
+  border-radius: 4px;
+
+  padding: 32px;
+}
+
+.frame {
+  border: 1px solid var(--thirdty);
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: 1;
   text-align: center;
+  font-size: 3.6rem;
+  font-family: "Peddana", serif;
+  color: var(--thirdty);
+}
+
+.header-btn {
+  font-size: 1.8rem;
+  font-family: "Architects Daughter", cursive;
+  padding: 16px;
+  background: unset;
+  border: unset;
+  outline: unset;
+
+  color: var(--thirdty);
+
+  cursor: pointer;
+}
+
+.header-btn.primary:active {
+  text-shadow: 1px 1px 2px var(--primary);
+}
+
+.header-btn.thirdty:active {
+  text-shadow: 1px 1px 2px var(--thirdty);
+}
+
+.add {
+  padding: 16px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  background: unset;
+  border: unset;
+  padding: 0 64px;
+
+  flex: 1;
+  border-bottom: 1px solid var(--primary);
+  outline: unset;
+
+  font-family: "Peddana";
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.add-btn {
+  font-size: 1.8rem;
+  font-family: "Architects";
+
+  padding: 16px;
+  padding-right: unset;
+  cursor: pointer;
+
+  background: unset;
+  border: unset;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+
+  flex: 1 0 auto;
+  text-align: center;
+
+  min-height: 34px;
+  margin: 16px 0 0;
+  font-family: "Architects";
+  font-size: 24px;
+
+  border-bottom: 1px solid var(--primary);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
